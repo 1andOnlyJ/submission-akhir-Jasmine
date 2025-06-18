@@ -65,8 +65,8 @@ main {
     padding: 2rem 4rem;
     display: flex;
     flex-direction: column; /* ⬅️ supaya .content ditumpuk ke bawah */
-    gap: 4rem; /* kasih jarak antar .content */
-    align-items: center;
+    gap: 2rem; /* kasih jarak antar .content */
+    align-items: flex-start; /* Pusatkan item secara vertikal */
 }
 
 main .content {
@@ -300,19 +300,34 @@ main .box .car-name {
     color: #333;
 }
 
-/* Membungkus konten utama dan aside */
-.content-wrapper {
-  display: flex;
-  gap: 2rem;
-  padding: 2rem;
-  max-width: 1200px;
-  margin: auto;
-  align-items: flex-start;
+.info-samping {
+  position: fixed;
+  right: 2rem;
+  top: 100px;
+  width: 90px;
+  background-color: #524a4a;
+  border-left: 10px solid #000000;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-size: 0.9rem;
+  z-index: 1000;
 }
 
-/* Bagian utama */
-.main {
-  flex: 3;
+.info-samping img {
+  max-width: 40%;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
 }
 
-/* Fun Fact Aside */
+.info-samping h3 {
+  margin: 0.5rem 0 0.3rem;
+  color: #D42F41;
+  font-size: 1.1rem;
+}
+
+.info-samping p {
+  margin: 0;
+  color: #333;
+  line-height: 1.4;
+}
